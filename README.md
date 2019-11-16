@@ -1,2 +1,2 @@
-# momo-aitime-app
+# momo-airtime-app
 MTN airtime bonus with Mobile money 
