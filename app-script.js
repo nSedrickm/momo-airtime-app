@@ -1,11 +1,14 @@
 var content = document.getElementById("content");
 var button = document.getElementById("continue-button");
+var subButton = document.getElementById("Button_Image");
 
 button.addEventListener("click", () => {
   content.innerHTML = `
 
       <div class=" col-sm-12 col-md-12 my-5">
-        <form id="formmomo" method="GET" action="https://developer.mtn.cm/OnlineMomoWeb/faces/transaction/transactionRequest.xhtml" target="_top">
+        <form id="formmomo"
+          method="GET"
+          action="https://developer.mtn.cm/OnlineMomoWeb/faces/transaction/transactionRequest.xhtml">
           <input type="hidden" name="idbouton" value="2" autocomplete="off">
           <input type="hidden" name="typebouton" value="PAIE" autocomplete="off">
           <input class="momo mount form-control form-control-lg" type="hidden" placeholder="amount" name="_amount" value="100" id="montant" autocomplete="off">
@@ -23,3 +26,29 @@ button.addEventListener("click", () => {
 
 `;
 });
+
+let deferredPrompt;
+
+/* prompt user to  add to their home screen */
+
+window.addEventListener("beforeinstallprompt", evt => {
+  evt.preventDefault();
+
+  //save event for future use
+  promptEvt = evt;
+
+  return false;
+});
+
+if (promptEvt !== undefined) {
+  //show install banner now
+  promptEvt.prompt();
+
+  promtEvt.userChoice.then(choice => {
+    console.log("User choice: ", choice.outcome);
+  });
+}
+
+//notifications
+
+var n = new Notification("Title", {});
