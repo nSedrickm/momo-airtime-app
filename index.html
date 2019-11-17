@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <title>BonusAirtime</title>
     <link rel="manifest" href="./site.webmanifest" />
     <link
@@ -30,23 +35,58 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body
-    class="container-fluid"
-    style="background-image: url('https://images2.alphacoders.com/392/392.jpg');background-size:cover; background-repeat: no-repeat;"
+    class="text-center container-fluid"
+    style="background-image: url('https://images2.alphacoders.com/392/392.jpg');"
   >
-    <div class="row">
-      <div class="col col-sm-12">
-        <h1 class="text-center mt-5 mb-5 text-warning font-weight-bold">
-          BonusAirtime
-        </h1>
+    <h1 class="text-center m-5 text-warning abril">
+      BonusAirtime
+    </h1>
+    <p class="lato-lg">
+      <span class="abril">BonusAirtime</span> gets you a bonus of 1000frs for
+      calls when you buy airtime for 100frs with your mobile money account
+    </p>
+    <div class="row" id="content">
+      <div class=" col-sm-12 col-md-12 my-5">
+        <h2 class="lobster">How it works</h2>
+        <div class="lato-lg my-5">
+          <p>Enter your phone number</p>
+          <p>Hit Get Bonus</p>
+          <p>Approve payment of 100 with mobile money</p>
+          <p>Dial *159*239# to check bonus balance</p>
+          <p>Enjoy</p>
+        </div>
+        <button
+          type="image"
+          id="continue-button"
+          class="btn btn-lg btn-warning btn-default rounded-pill text-white px-5 py-3 m-5 font-weight-bold lato"
+        >
+          continue
+        </button>
+      </div>
+
+      <div class=" col-sm-12 col-md-12 my-5">
         <form
           id="formmomo"
           method="GET"
           action="https://developer.mtn.cm/OnlineMomoWeb/faces/transaction/transactionRequest.xhtml"
           target="_top"
-          class="mx-2"
         >
           <input type="hidden" name="idbouton" value="2" autocomplete="off" />
           <input
@@ -65,13 +105,13 @@
             autocomplete="off"
           />
           <div class="form-group">
-            <label for="phone-number" class="h5 font-weight-bold"
+            <label for="phone-number" class="h5 lobster-lg "
               >Phone Number</label
             >
             <input
-              class="momo host form-control form-control-lg mt-2 border-warning"
+              class="momo host form-control form-control-lg rounded mt-3 border-warning "
               type="number"
-              placeholder="Phone Number"
+              placeholder="phone number"
               name="_tel"
               value=""
               autocomplete="off"
@@ -98,14 +138,13 @@
             name="submit"
             alt="OnloneMomo, le réflexe sécurité pour payer en ligne"
             autocomplete="off"
-            class="btn btn-lg btn-warning rounded-pill text-white px-5 py-2 mt-2 font-weight-bold"
+            class="btn btn-lg btn-warning btn-default rounded-pill text-white px-5 py-3 m-5 font-weight-bold lato"
           >
             Get Bonus
           </button>
         </form>
-
-        <script src="./app-script.js"></script>
       </div>
     </div>
+    <script src="./app-script.js"></script>
   </body>
 </html>
