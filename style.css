@@ -1,3 +1,8 @@
+body {
+  background-image: url("https://images2.alphacoders.com/392/392.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .lato {
   font-family: "Lato", sans-serif;
 }
