@@ -47,6 +47,10 @@ function checkInstalledState() {
     addToHome.classList.remove("d-none");
     promptEvt.prompt();
 
+    addToHome.addEventListener("click", () => {
+      promptEvt.prompt();
+    });
+
     promptEvt.userChoice.then(choiceResult => {
       if (choiceResult.outcome === "accepted") {
         console.log("User accepted the A2HS prompt");
