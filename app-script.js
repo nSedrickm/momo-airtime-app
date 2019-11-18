@@ -44,12 +44,7 @@ function checkInstalledState() {
   //show install banner now
   if (promptEvt !== undefined) {
     // hide our user interface that shows our A2HS button
-    addToHome.classList.remove("d-none");
     promptEvt.prompt();
-
-    addToHome.addEventListener("click", () => {
-      promptEvt.prompt();
-    });
 
     promptEvt.userChoice.then(choiceResult => {
       if (choiceResult.outcome === "accepted") {
