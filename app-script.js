@@ -34,18 +34,12 @@ window.addEventListener("beforeinstallprompt", evt => {
   promptEvt = evt;
 
   // Update UI notify the user they can add to home screen
-  addToHome.classList.remove("d-none");
 
   return false;
 });
 
 function checkInstalledState() {
   console.log("subButton clicked ");
-
-  console.log(addToHome.classList.contains("d-none"));
-  addToHome.classList.remove("d-none");
-  console.log(addToHome.classList.contains("d-none"));
-  console.log(promptEvt.returnValue);
 
   //show install banner now
   if (promptEvt !== undefined) {
@@ -66,7 +60,7 @@ function checkInstalledState() {
 subButton.addEventListener("click", checkInstalledState);
 
 window.addEventListener("appinstalled", evt => {
-  console.log("a2hs installed");
+  console.log("a2hs installed :" + evt);
 });
 
 //notifications
